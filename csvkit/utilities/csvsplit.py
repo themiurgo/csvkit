@@ -85,7 +85,7 @@ class CSVSplit(CSVKitUtility):
         if not self.args.columns:
             self.argparser.error('You must specify at least one column to search using the -c option.')
 
-        rows = CSVKitReader(self.args.file, **self.reader_kwargs)
+        rows = CSVKitReader(self.input_file, **self.reader_kwargs)
 
         if self.args.no_header_row:
             row = rows.next()
